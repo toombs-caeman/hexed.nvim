@@ -5,6 +5,7 @@ return {
         -- this is non-trivial. see how others do this
         function HexedToggle()
             if vim.b.hexed then
+                vim.cmd("syn clear")
                 vim.cmd("%!xxd -r")
                 vim.cmd("filetype detect")
             else
